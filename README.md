@@ -13,21 +13,12 @@ Si algo ahí no funciona, seguir las instrucciones que se encuentran en el repo 
 
 ## Consignas
 
-### Museos
+En este ejercicio tienen que escribir texto en varios archivos, y en NodeJS hay dos maneras de lograrlo:
+* usando `fs.writeFile`, que reemplaza todo lo que haya en el archivo,
+* o usando `fs.appendFile`, que agrega al final de lo que el archivo ya tenga.
 
-Escribir los resultados de la request en un archivo llamado `museos.txt`. Debe haber una línea por cada museo, con este formato: `NOMBRE (DIRECCION). Por cualquier consulta comunicarse al TELEFONO`. 
-
-Por ejemplo: 
-
-```
-Complejo Histórico Cultural Manzana de las Luces (Perú 222, Ciudad de Buenos Aires). Por cualquier consulta comunicarse al +54 (011) 4342-9930 / 6973
-```
-
-Para escribir un archivo tienen dos opciones:
-* `fs.writeFile`, que borra todo el contenido
-* o `fs.appendFile`, que agrega al final de lo que hay.
-
-Ejemplo con `writeFile`:
+Tienen los mismos parámetros y se usan de la misma forma, deberán elegir uno u otro según cómo piensen su programa. 
+Les dejamos un ejemplo usando `writeFile` y callback anónimo:
 
 ```js
 const fs = require('fs');
@@ -43,6 +34,16 @@ fs.writeFile('saludo.txt', `Hoy es ${hoy.toDateString()}. ¿Todo bien?`, (error)
   
   console.log('Se escribió tu archivo correctamente');
 });
+```
+
+### Museos
+
+Escribir los resultados de la request en un archivo llamado `museos.txt`. Debe haber una línea por cada museo, con este formato: `NOMBRE (DIRECCION). Por cualquier consulta comunicarse al TELEFONO`. 
+
+Por ejemplo: 
+
+```
+Complejo Histórico Cultural Manzana de las Luces (Perú 222, Ciudad de Buenos Aires). Por cualquier consulta comunicarse al +54 (011) 4342-9930 / 6973
 ```
 
 ### Organismos
@@ -70,3 +71,5 @@ Copiá tu programa y modificalo para cumplir con cada una de estas variantes:
   * `'escribiendo museo en archivo'`
   * `'escribiendo organismo en archivo'`
   * `'ejecución finalizada'` - asegurarse de que este es el ultimo mensaje.
+  
+Para que armar las variantes sea más fácil, conviene que las distintas partes estén en funciones con nombre para solamente tener que modificar el orden en que se llaman.
