@@ -71,5 +71,6 @@ Copiá tu programa y modificalo para cumplir con cada una de estas variantes:
   * `'escribiendo museo en archivo'`
   * `'escribiendo organismo en archivo'`
   * `'ejecución finalizada'` - asegurarse de que este es el ultimo mensaje.
-  
+1. Agregar a la variante anterior que luego de escribir los `.txt`, los lea y los imprima por pantalla (sincronizar esto con callbacks: hay que esperar a escribir a los `.txt` para poder leerlos y mostrarlos por pantalla).
+
 Para que armar las variantes sea más fácil, conviene que las distintas partes estén en funciones con nombre para solamente tener que modificar el orden en que se llaman.
